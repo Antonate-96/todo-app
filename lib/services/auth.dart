@@ -20,18 +20,6 @@ class Authservice {
         .map((User? user) => _userfromfirebaseUser(user));
   }
 
-  //sign in anonymouse
-  Future signInAnon() async {
-    try {
-      UserCredential result = await _auth.signInAnonymously();
-      User? user = result.user;
-      return _userfromfirebaseUser(user!);
-    } catch (e) {
-      print(e.toString());
-      return null;
-    }
-  }
-
   //sign in with email & pass
   Future signInWithEmailAndPassword(String email, String password) async {
     try {
@@ -52,8 +40,8 @@ class Authservice {
           email: email, password: password);
       User? user = result.user;
       // create a new document for new user with uid
-      await DatabaseService(uid: user!.uid)
-          .updateUserData('0', 'new task', 'new detail');
+      // await DatabaseService(uid: user!.uid)
+      //     .updateUserData(detail: '0', name: 'new task', task: 'new detail');
       return _userfromfirebaseUser(user);
     } catch (e) {
       log(e.toString());
