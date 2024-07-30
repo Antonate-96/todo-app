@@ -29,7 +29,7 @@ class _SignInState extends State<SignIn> {
             // backgroundColor: Theme.of(context).backgroundColor,
             appBar: AppBar(
               elevation: 0.0,
-              title: Text('Sign in to brew crew'),
+              title: Text('Todos list'),
               actions: <Widget>[
                 TextButton.icon(
                   icon: Icon(Icons.person),

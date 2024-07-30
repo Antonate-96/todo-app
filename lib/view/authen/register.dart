@@ -28,7 +28,7 @@ class _RegisterState extends State<Register> {
             // backgroundColor: Theme.of(context).backgroundColor,
             appBar: AppBar(
               elevation: 0.0,
-              title: const Text('Sign up to brew crew'),
+              title: const Text('Sign up'),
               actions: <Widget>[
                 TextButton.icon(
                   icon: const Icon(Icons.person),
@@ -44,6 +44,7 @@ class _RegisterState extends State<Register> {
               child: Form(
                   key: _formKey,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       const SizedBox(height: 20.0),
                       TextFormField(

@@ -63,6 +63,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '749540372967',
     projectId: 'todos-c797d',
     storageBucket: 'todos-c797d.appspot.com',
-    iosBundleId: 'com.moozupak.todos',
+    iosBundleId: 'com.example.todos',
   );
 }

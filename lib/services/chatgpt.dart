@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart' as Getx;
+import 'package:todos/shared/constant.dart';
 import 'package:todos/shared/state.dart';
 
 class Chatgpt {
@@ -11,12 +12,11 @@ class Chatgpt {
     final UserController c = Getx.Get.put(UserController());
 
     try {
-      response = await dioClient.post('https://9qzbzz.buildship.run/todos-list',
-          data: {
-            "message": message,
-            "threadId": threadId,
-            "userid": c.user.value!.uid.toString()
-          });
+      response = await dioClient.post(buildship_url, data: {
+        "message": message,
+        "threadId": threadId,
+        "userid": c.user.value!.uid.toString()
+      });
       if (response.statusCode == 200) {
         log('${response.realUri}');
         log('${response.data["message"]}');

@@ -8,7 +8,7 @@
 PRODUCT_NAME = todos
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.moozupak.todos
+PRODUCT_BUNDLE_IDENTIFIER = com.example.todos
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2024 com.example. All rights reserved.
