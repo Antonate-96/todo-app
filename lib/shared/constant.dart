@@ -17,4 +17,4 @@ const textInputDecoration = InputDecoration(
   ),
 );
 
-String buildship_url = "add you buildship url here" ghg  ;
+String buildship_url = "add you buildship url here";
