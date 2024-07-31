@@ -19,9 +19,9 @@ class DatabaseService {
       required bool? is_complete}) async {
     final UserController c = Get.put(UserController());
     return await notesCollection.doc(uid).set({
-      'name': task,
+      'task': task,
       'detail': detail,
-      'sales': is_complete,
+      'is_complete': is_complete,
       'userid': c.user.value!.uid.toString(),
     });
   }
@@ -33,9 +33,9 @@ class DatabaseService {
       required String docid}) async {
     final UserController c = Get.put(UserController());
     return await notesCollection.doc(docid).set({
-      'name': task,
+      'task': task,
       'detail': detail,
-      'sales': is_complete,
+      'is_complete': is_complete,
       'userid': c.user.value!.uid.toString(),
     });
   }
@@ -51,8 +51,8 @@ class DatabaseService {
       return Todos(
         docid: doc.id,
         detail: doc.get('detail'),
-        is_complete: doc.get('sales') ?? false,
-        task: doc.get('name') ?? 'no task',
+        is_complete: doc.get('is_complete') ?? false,
+        task: doc.get('task') ?? 'no task',
         userid: doc.get('userid') ?? 'no userid',
       );
     }).toList();
