@@ -17,4 +17,4 @@ const textInputDecoration = InputDecoration(
   ),
 );
 
-String buildship_url = "https://9qzbzz.buildship.run/todos-list";
+String buildship_url = "add you buildship url here";
